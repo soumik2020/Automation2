@@ -10,6 +10,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
+    class p1
+    {
+        private int i=0;
+    }
+    class p2:p1
+    {
+     pubic int j =i;
+    }
     class Program
     {
         static void Main(string[] args)
