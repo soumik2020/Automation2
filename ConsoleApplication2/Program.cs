@@ -4,17 +4,20 @@ using Microsoft.Build.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.linq;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
+
+    public class p1
+    {
+	private int i;
+     }
     class Program
     {
-		public class p1{
-			private int i;
-		}
+		
         static void Main(string[] args)
         {
 			p1 p = new p1();
