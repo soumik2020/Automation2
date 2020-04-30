@@ -1,27 +1,25 @@
-﻿using Microsoft.Build.Evaluation;
+using Microsoft.Build.Evaluation;
 using Microsoft.Build.Execution;
 using Microsoft.Build.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using System.linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class p1
-    {
-        private int i=0;
-    }
-    class p2:p1
-    {
-     pubic int j =i;
-    }
     class Program
     {
+		public class p1{
+			private int i;
+		}
         static void Main(string[] args)
         {
+			p1 p = new p1();
+			p.i = 10;
+         
             string[] error = { "App1.Test.i is not accessible in this context because it is Protected", "App1.Test.j is not accessible in this context because it is Private", "Test.Protected Sub X() is not accessible in this context because it is Protected", "GlobalProxySelection is obsolete" };
             string[] projects = { "App1", "App1", "App1", "App1" };
             string[] errorFilePath = { "C:\\Users\\Sanjib Sen\\source\\repos\\App1", "C:\\Users\\Sanjib Sen\\source\\repos\\App1", "C:\\Users\\Sanjib Sen\\source\\repos\\App1", "C:\\Users\\Sanjib Sen\\source\\repos\\App1" };
